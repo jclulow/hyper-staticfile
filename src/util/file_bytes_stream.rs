@@ -10,7 +10,7 @@ use std::vec;
 use tokio::fs::File;
 use tokio::io::{AsyncRead, AsyncSeek, ReadBuf};
 
-const BUF_SIZE: usize = 8 * 1024;
+const BUF_SIZE: usize = 128 * 1024;
 
 /// Wraps a `tokio::fs::File`, and implements a stream of `Bytes`s.
 pub struct FileBytesStream {
